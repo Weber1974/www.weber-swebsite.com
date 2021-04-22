@@ -1,0 +1,43 @@
+<!doctype html>
+<!-- form.html                                         Dr. Weber, (not really a doctor)-->
+<!-- Web page that generates a form letter based on user inputs with the inclusion of a time box for the exam at 1:35-->
+<!-- =========================================================== -->
+
+<html>
+ <head>
+   <title>Iinvitation Form. </title>
+ </head>
+
+ <body>
+   <h2>Dinner Invite Form </h2>
+   <p>
+     Enter Recipient's name: 
+       <input type="text" id="recipientBox" size=20 value="friend"> <br>
+     Enter Activity: 
+       <input type="text" id="activityBox" size=20 value="soirée"> <br>
+     Enter Date: 
+	<input type="text" id="dateBox" size=20 value="April 15"><br>
+     Enter Time:
+	<input type="text" id="timeBox" size=20 value="8:30 AM - Midnight">
+   </p>
+     <input type="button" value="Click for Invite"
+            onclick="document.getElementById('outputDiv').innerHTML=
+                       '<p>Dear ' + document.getElementById('recipientBox').value + 
+                       ',</p> <p> Will you please come to my  ' +
+                       document.getElementById('activityBox').value +
+                       ', it is coming up on ' +
+                       document.getElementById('dateBox').value + 
+			', at ' +
+			document.getElementById('timeBox').value + 
+                       '. <br> we will do many fun things that you will not want to miss at my ' + 
+                       document.getElementById('activityBox').value + 
+                       '. <br> please reserve ' + 
+			document.getElementById('timeBox').value + 
+			', on ' + 
+                       document.getElementById('dateBox').value + 
+			', for this event' +								'.</p>' +
+                       '<p style=\'text-align:left\'>Sincerely<br> Your Fiend</p>';">
+   <hr>
+   <div id="outputDiv"></div>
+ </body>
+</html>

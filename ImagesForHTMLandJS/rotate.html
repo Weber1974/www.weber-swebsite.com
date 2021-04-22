@@ -1,0 +1,37 @@
+
+
+<!doctype html>
+<!-- swapImages.html                               Dr. Weber( wants to be a doc) -->
+<!-- Web page that swaps two images at the click of a button. -->
+<!-- ======================================================== -->
+
+<html>
+ <head>
+   <title>Swap Images on the Click of a button</title>
+ </head>
+
+ <body>
+  <div style="text-align:center">
+  <h2>Image rotater </h2>
+  <p>
+   <img id="leftImg" src="../ImagesForHTMLandJS/1.png">
+   <img id="midImg" src="../ImagesForHTMLandJS/2.jpg">
+   <img id="rightImg" src="../ImagesForHTMLandJS/3.png">
+  </p>
+  <input type="button" value="rotate left "  style= "background-color:olive;color:pink"
+      onclick="
+              saved=document.getElementById('leftImg').src;
+              document.getElementById('leftImg').src= document.getElementById('midImg').src;
+		document.getElementById('midImg').src= document.getElementById('rightImg').src;
+              document.getElementById('rightImg').src=saved;
+             ">
+<input type="button" value="rotate right"  style= "background-color:brown ;color:gold"
+      onclick="
+              saved=document.getElementById('rightImg').src;
+              document.getElementById('rightImg').src= document.getElementById('midImg').src;
+		document.getElementById('midImg').src= document.getElementById('leftImg').src;
+              document.getElementById('leftImg').src=saved;
+             ">
+   </div>
+ </body>
+</html>
